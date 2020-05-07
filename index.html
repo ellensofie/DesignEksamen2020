@@ -12,6 +12,7 @@
   <header>
     <div class="previewLogo">
       <img src="logo.png">
+      <label class="dateDisplay" for="output" name="lblDate" id="dateDisplay">output</label>
     </div>
   </header>
 
@@ -19,13 +20,19 @@
   <main class="mainStyle">
     <section>
       <h1>Photobook</h1>
-      <p>
-        This is a paragraph.
-        Note that the text is automatically wrapped.
+      <p class="center">
+        Welcome to the photobook where you can create amazing photobooks you can share with your family and loved ones.
+      <br><br>
       </p>
+      <form action="">
+        <input type="text" id="name" name="name" placeholder="Write your name here">
+        <br>
+        <p class="center">Hit the button and lets get started. </p>
+      </form>
       <br>
-
-      <button>READ MORE</button> <br>
+      <div class="center">
+        <button>Get Started</button> <br>
+      </div>
     </section>
 
   </main>
@@ -35,4 +42,5 @@
     
   </footer>
 </body>
+<script src="index.js"></script>
 </html>

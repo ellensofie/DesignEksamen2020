@@ -16,17 +16,32 @@
 
 .mainStyle{
     background-color: #90B0BD;
+    background-image: linear-gradient( 135deg, #39A8D8 20%, #cc6666 100%);
 }
 
 h1{
-    color: #E4F1F2;
+    color: #fff;
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-size: 80px;
     margin-bottom: 30px;
-    padding-top: 10px;
+    padding-top: 15px;
+    text-shadow: 2px 2px 2px #333;
 }
-button {
+.dateDisplay{
+    color: #fff;
+    font-size: 30px;
+    float: right;
+    margin-right: 10px;
+}
+
+p{
+    color: #fff;
+    font-size: 18px; 
+    text-shadow: 1px 1px 1px #333;
+}
+
+button{
 	border: none;
 	outline: none;
 	padding: 10px 20px;
@@ -36,7 +51,36 @@ button {
 	margin-bottom: 50px;
     box-shadow: 0 3px 20px 0 #0000003b;
     text-align: center;
+    font-size: 16px;
+    display: inline-block;
 }
+
 button:hover{
-	cursor: pointer;
+    cursor: pointer;
+    background: #39A8D8;
+    color: #fff;
+}
+
+input{
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* Følgende sikrer centrering*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+::placeholder{
+    text-align: center;
+    color: #333;
+
+}
+.center {
+    text-align: center;
+}
+
+img{
+    margin-left: 10px;
 }
