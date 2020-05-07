@@ -1,11 +1,42 @@
-.header{
+.fullScreen{
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.previewLogo {
     font-size: 12px;
-    height: 54px;
+    height: 68px;
     background-color: #262626;
     z-index: 100;
     line-height: 54px;
     margin-bottom: 1px;
 }
-div {
-    display: block;
+
+.mainStyle{
+    background-color: #90B0BD;
+}
+
+h1{
+    color: #E4F1F2;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+button {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: #333;
+	background: #fff;
+	margin-bottom: 50px;
+    box-shadow: 0 3px 20px 0 #0000003b;
+    text-align: center;
+}
+button:hover{
+	cursor: pointer;
 }
