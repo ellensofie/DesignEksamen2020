@@ -3,6 +3,15 @@ function changePage(){
 }
 
 function todaysDate(){
-    let d = new Date(); 
-    document.getElementById("dateDisplay").innerHTML = d.toDateString();
+    var d = new Date(); 
+    var date = d.getDay() + '-' + (d.getMonth()+1) + '-' + d.getFullYear();
+    document.getElementById("dateDisplay").innerHTML = date;
+}
+
+function loadNextPage(){
+    window.location.href = "nextpage.html";
+}
+
+function loadLandingPage(){
+    window.location.href = "index.html";
 }

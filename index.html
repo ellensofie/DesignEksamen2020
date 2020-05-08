@@ -12,7 +12,9 @@
   <header>
     <div class="previewLogo">
       <img src="logo.png">
-      <label class="dateDisplay" for="output" name="lblDate" id="dateDisplay">output</label>
+      <label class="dateDisplay" for="output" name="lblDate" id="dateDisplay" onload="todaysDate()">
+      </label>
+      
     </div>
   </header>
 
@@ -27,11 +29,11 @@
       <form action="">
         <input type="text" id="name" name="name" placeholder="Write your name here">
         <br>
-        <p class="center">Hit the button and lets get started. </p>
+        <p class="center"> Hit the button and lets get started. </p>
       </form>
       <br>
       <div class="center">
-        <button>Get Started</button> <br>
+        <button onclick="loadNextPage()">Get Started</button> <br>
       </div>
     </section>
 
