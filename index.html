@@ -9,26 +9,24 @@
   <meta charset = "UTF-8" />
 </head>
 <body class="fullScreen" >
-  <header>
-    <div class="previewLogo">
-      <img src="logo.png">
-      <label class="dateDisplay" for="output" name="lblDate" id="dateDisplay" onload="todaysDate()">
-      </label>
-      
+  <header id="header" class="header">
+    <div class="headerTop">
+      <div class="row">
+        <div class="header_content">
+          <img src="logo.png">
+        </div>
+      </div>
     </div>
   </header>
 
 
   <main class="mainStyle">
-    <section>
+    <section class="center">
       <h1>Photobook</h1>
       <p class="center">
         Welcome to the photobook where you can create amazing photobooks you can share with your family and loved ones.
-      <br><br>
-      
-
-
       </p>
+        <br><br>
       <form action="">
         <input type="text" id="name" name="name" placeholder="Write your name here">
         <br>
@@ -43,8 +41,15 @@
   </main>
 
 
-  <footer>
-    
+  <footer class="footer">
+    <p> The best group </p>
+    <nav style="color: azure;"><p>Date/Time: <span id="datetime"></span></p>
+      <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = dt.toLocaleString();
+        </script>
+    </nav>
+
   </footer>
 </body>
 <script src="index.js"></script>
