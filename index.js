@@ -8,7 +8,7 @@ function getDate(){
 }
 
 function loadNextPage(){
-    window.location.href = "nextpage.html";
+    window.location.href = "styleSide.html";
 }
 
 function loadLandingPage(){
