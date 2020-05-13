@@ -46,6 +46,9 @@ p{
     font-size: 14px;   
     font-style: italic;
     text-align: center;
+}
+.footerP{
+    color: whitesmoke;
 
 }
 button{
@@ -53,10 +56,10 @@ button{
 	outline: none;
 	padding: 10px 20px;
 	border-radius: 50px;
-	color: #333;
-	background: #fff;
+	color: white;
+	background: #426950;
 	margin-bottom: 50px;
-    box-shadow: 0 3px 20px 0 #0000003b;
+    box-shadow: 0 3px 20px 0 #426950;
     text-align: center;
     font-size: 16px;
     display: inline-block;
@@ -64,7 +67,7 @@ button{
 
 button:hover{
     cursor: pointer;
-    background: #5cb7e4;
+    background: #74AA8D;
     color: #fff;
 }
 
@@ -74,6 +77,8 @@ input{
     outline: none;
     padding: 10px 20px;
     border-radius: 10px;
+    box-shadow: 0 3px 20px 0 #426950;
+
     /* Følgende sikrer centrering*/
     display: block;
     margin-left: auto;
@@ -89,4 +94,5 @@ input{
     height: auto;
     max-width: 400px;
     width: 100%;
+    padding: 10px;
 }
