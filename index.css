@@ -1,72 +1,53 @@
-.fullScreen{
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-    background-color: #798086;
+html, body{
+    height:100%; 
+    margin:0; 
+    padding: 0;
+}
+body{
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-family: 'Indie Flower', cursive;
+    background-color: #A6EBC9;
+    display: flex;
+    flex-direction: column;
 }
 
-.headerTop{
+header{
     border-top: 5px solid #B79FAD;
-    position: fixed;
-    top: 0;
-    left: 0;
+    padding: 10px 10px;
     width: 100%;
-    z-index: 99999;
+    background-color: #85C0A1;
 }
 
 section{
-    background-image: linear-gradient(135deg, #2E6171 20% , #D4AFCD 100%);
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-
-.header{
-    font-size: 12px;
-    height: 68px;
-    background-color: #556F7A;
-    z-index: 100;
-    line-height: 54px;
-    margin-bottom: 1px;
-    width: auto;
-}
-
-.row{
-    position: relative;
-    margin: auto;
-    width: 100%;
-}
-
-.mainStyle{
-    height: 60vh;
-    padding: 20px;
+footer {
+    border-top: 5px solid #B79FAD;
+    margin-top: auto;
+    background-color: #333;
+    padding: 5px;
+    width: 101.5%;
 }
 
 h1{
-    color: #fff;
+    color: white;
+    font-size: 50px;
     text-align: center;
-    font-family: 'Dancing Script', cursive;
-    font-size: 80px;
-    margin-bottom: 30px;
-    padding-top: 15px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 4px;
     text-shadow: 2px 2px 2px #333;
-    cursor: default;
-}
-.dateDisplay{
-    color: #fff;
-    font-size: 30px;
-    float: right;
-    margin-right: 10px;
-}
 
+}
 p{
-    color: #fff;
-    font-size: 18px; 
-    text-shadow: 1px 1px 1px #333;
-    cursor: default;
+    color: white;
+    font-size: 14px;   
+    font-style: italic;
+    text-align: center;
 
 }
-
 button{
 	border: none;
 	outline: none;
@@ -103,20 +84,9 @@ input{
     color: #333;
 
 }
-.center {
-    text-align: center;
-}
 
-img {
-    margin-left: 10px;
-}
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+#bookPhoto{
+    height: auto;
+    max-width: 400px;
     width: 100%;
-    background-color: #556F7A;
-    color: white;
-    text-align: center;
-    padding: 10px;
 }

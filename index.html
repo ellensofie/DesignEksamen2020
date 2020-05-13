@@ -8,32 +8,29 @@
         <link rel="stylesheet" type="text/css" href="index.css">
   <meta charset = "UTF-8" />
 </head>
-<body class="fullScreen" >
-  <header id="header" class="header">
-    <div class="headerTop">
-      <div class="row">
-        <div class="header_content">
+<body >
+  <header id="header">
+    <div>
           <img src="logo.png">
-        </div>
-      </div>
-    </div>
+   </div>
   </header>
 
 
-  <main class="mainStyle">
-    <section class="center">
+  <main>
+    <section>
       <h1>Photobook</h1>
-      <p class="center">
+      <p>
         Welcome to the photobook where you can create amazing photobooks you can share with your family and loved ones.
       </p>
         <br><br>
       <form action="">
         <input type="text" id="name" name="name" placeholder="Write your name here">
         <br>
-        <p class="center"> Hit the button and lets get started. </p>
+        <img id="bookPhoto" src="slide2.jpg" alt="book">
+        <p> Hit the button and lets get started. </p>
       </form>
       <br>
-      <div class="center">
+      <div>
         <button onclick="loadViewPage()">Get Started</button> <br>
       </div>
     </section>
@@ -41,7 +38,7 @@
   </main>
 
 
-  <footer class="footer">
+  <footer>
     <p> The best group </p>
     <nav style="color: azure;"><p>Date/Time: <span id="datetime"></span></p>
       <script>
