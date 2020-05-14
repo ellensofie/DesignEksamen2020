@@ -1,6 +1,6 @@
 html, body{
-    height:100%; 
-    margin:0; 
+    height:100%;
+    margin:0;
     padding: 0;
 }
 body{
@@ -39,11 +39,13 @@ h1{
     text-decoration: none;
     border-radius: 4px;
     text-shadow: 2px 2px 2px white;
+    margin-bottom: 10px;
+
 
 }
 p{
     color: #213E28;
-    font-size: 14px;   
+    font-size: 14px;
     font-style: italic;
     text-align: center;
 }
@@ -82,7 +84,7 @@ input{
     /* Følgende sikrer centrering*/
     display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto
 }
 ::placeholder{
     text-align: center;
@@ -95,4 +97,20 @@ input{
     max-width: 400px;
     width: 100%;
     padding: 10px;
+}
+
+#pageName{
+    margin: 10px;
+}
+
+.collapsible-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    padding: 1rem;
+    background-color: #64ffda;
+    border-bottom: 2px solid #64ffda;
 }

@@ -45,3 +45,6 @@ function autoplay() {
     $('.carousel').carousel('next');
     setTimeout(autoplay, 2500);
 }
+
+/** Nav bar**/
+$(".button-collapse").sideNav();
