@@ -31,3 +31,17 @@ document.addEventListener('DOMContentLoaded', function() {
         fullWidth: true
     });
 });
+
+/** Makes carousel dragable **/
+$(document).ready(function(){
+    $('.carousel').carousel({
+        indicators:true
+    });
+});
+
+/** Får Carousel til at dreje rundt **/
+autoplay();
+function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 2500);
+}
