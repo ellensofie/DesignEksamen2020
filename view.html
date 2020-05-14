@@ -9,8 +9,7 @@
   <meta charset = "UTF-8" />
 </head>
 
-<body class="fullScreen">
-
+<body class="fullScreen" onload="loadimage()">
 <header>
     <div class="previewLogo">
         <img src="logo.png" onclick="loadLandingPage()">     
@@ -18,7 +17,8 @@
 </header>
 
 <main class="mainStyle">
-        <button onclick="loadNextPage()"> Load stylePage</button>
+    <img id="page-image" class="image" src="" >
+    <button onclick="loadNextPage()"> Update</button>
 </main>
 
     
