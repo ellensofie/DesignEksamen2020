@@ -20,25 +20,24 @@ function getTitle() {
     return title;
 }
 
-function getFotoTekst() {
-    var FotoTekst = document.getElementById("imgTextInput").value;
-    return FotoTekst;
+function getPhotoText() {
+    var photoText = document.getElementById("imgTextInput").value;
+    return photoText;
 }
 
 function getImg() {
 
-
 }
-
-
 
 function setPageObject(){
     if (file == null){
-        page = new Page(getTitle(),null,getFotoTekst());
-    }
-
-    else{
-        page = new Page("My Birthday", file, "Have fun");
+        page = new Page(getTitle(),null,getPhotoText());
+    }else if(title == null){
+        page = new Page(null, file, getPhotoText());
+    }else if (photoText == null){
+        page = new Page(getTitle(), file, null);
+    }else{
+        page = new Page(getTitle(), getImg(), getPhotoText());
     }
     localStorage.setItem('page',JSON.stringify(page));
 }
