@@ -14,11 +14,11 @@
 
     </header>
     <form class="create-page">
-        <img src="slide1.jpg" class="photo">
-        <input id="titleInput" type="text">
-        <input id="imgTextInput" type="text">
-        <input class="photo-input" id="photoInput" type="file" accept="image/*" onchange="">
-        <label onclick="setImage()" for="photoInput">Upload picture</label>
+        <img src="slide1.jpg" class="photo" id="previewImage">
+        <input id="titleInput" type="text" oninput="">
+        <input id="imgTextInput" type="text" oninput="">
+        <input class="photo-input" id="photoInput" type="file" accept="image/*" onchange="filePreview()">
+        <label for="photoInput">Upload picture</label>
         <button onclick="setPage()">Finish</button>
     </form>
     <script src="create-album-page.js"></script>

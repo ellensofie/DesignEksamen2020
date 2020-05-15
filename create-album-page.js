@@ -58,7 +58,9 @@ function getImages(){
     img.src = JSON.parse(localStorage.getItem('image'));
 }
 
+/*
 function filePreview(input) {
+    console.log(input);
     return new Promise((resolve, reject) => {
         if (input.files && input.files[0]) {
             const reader = new FileReader();
@@ -73,6 +75,10 @@ function filePreview(input) {
             reject();
         }
     });
+}*/
+function filePreview(){
+    const file = document.querySelector('input[type=file]').files[0];
+    img.src = window.URL.createObjectURL(file);
 }
 
 
