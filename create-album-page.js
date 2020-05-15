@@ -27,9 +27,26 @@ class Page{
     }
 }
 
+function getTitle() {
+    var title = document.getElementById("titleInput").value;
+    return title;
+}
+
+function getFotoTekst() {
+    var FotoTekst = document.getElementById("imgTextInput").value;
+    return FotoTekst;
+}
+
+function getImg() {
+
+
+}
+
+
+
 function setPageObject(){
     if (file == null){
-        page = new Page("My Birthday",null,"Have fun");
+        page = new Page(getTitle(),null,getFotoTekst());
     }
 
     else{
@@ -42,7 +59,7 @@ function getPage() {
     page = JSON.parse(localStorage.getItem('page'));
     document.getElementById("pageTitle").innerHTML = page.title;
     document.getElementById("pagePhoto").innerHTML = page.imgURL;
-    document.getElementById("pagePhotoText").innerHTML =page.photoText;
+    document.getElementById("pagePhotoText").innerHTML = page.photoText;
 }
 
 function filePreview(){
