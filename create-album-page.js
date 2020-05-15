@@ -8,22 +8,37 @@ class Page{
         this.imgURL = imgURL;
         this.imgtext = imgtext;
     }
+
+    get title() {
+        return this.title;
+    }
+
+    get imgURL() {
+        return this.imgURL;
+    }
+
+    get imgtext() {
+        return this.imgtext;
+    }
 }
 
 const pages = [];
 
-function setPageObject(){
-    page = new Page(document.getElementById("title_input"), document.getElementById(), document.getElementById("imgtext_input"));
+function makePageObject(){
+    page = new Page(setTitle()), setPhotoText();
     pages.push(page);
 }
 
-function loadPhoto() {
-    var x = document.createElement("IMG");
-    x.setAttribute("src", "img_pulpit.jpg");
-    x.setAttribute("width", "304");
-    x.setAttribute("height", "228");
-    document.body.appendChild(x);
+function setTitle() {
+    var title = document.getElementById("title_input");
+    return title;
 }
+
+function setPhotoText() {
+    var photoText = document.getElementById("imgTextInput");
+    return photoText;
+}
+
 
 function setImage() {
 
@@ -58,4 +73,19 @@ function filePreview(input) {
             reject();
         }
     });
+}
+
+
+
+
+///////////////////////////////////////////////////////EKSTRA FRA NETTET
+
+
+
+function loadPhoto() {
+    var x = document.createElement("IMG");
+    x.setAttribute("src", "img_pulpit.jpg");
+    x.setAttribute("width", "304");
+    x.setAttribute("height", "228");
+    document.body.appendChild(x);
 }
