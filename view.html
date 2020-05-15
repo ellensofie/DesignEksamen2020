@@ -1,31 +1,77 @@
 <!DOCTYPE HTML>
 <html lang = "en">
 <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Photobook</title>
         <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Mouse+Memoirs&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
         <link rel="stylesheet" type="text/css" href="reset.css">
-        <link rel="stylesheet" type="text/css" href="styleRest.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
   <meta charset = "UTF-8" />
 </head>
-
-<body class="fullScreen">
-
+<body>
 <header>
-    <div class="previewLogo">
-        <img src="logo.png" onclick="loadLandingPage()">     
-    </div>
+    <nav class="blue-grey" >
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" id="pageName" class="brand-logo">Photobook</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse hoverable"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li class="active hoverable"><a href="index.html"><i class="material-icons">home</i></a></li>
+                    <li class="active hoverable"><a href="help.html"><i class="material-icons">help</i></a></li>
+                </ul>
+                <ul class="side-nav blue-grey"  id="mobile-demo">
+                    <li id="logoSlideImg"><img src="logo.png"></li>
+                    <li class="active hoverable white"><a href="index.html"><i class="material-icons">home</i> Home</a></li>
+                    <li class="active hoverable light-blue"><a href="help.html"><i class="material-icons">help</i> Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
 
-<main class="mainStyle">
-        <button onclick="loadNextPage()"> Load stylePage</button>
+<main>
+    <br><br>
+    <button onclick="loadNextPage()"> Load stylePage</button>
+    <section class="sectionOnView">
+        <div class="gallery">
+            <a target="_blank" href="slide1.jpg">
+                <img src="slide1.jpg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="slide2.jpg">
+                <img src="slide2.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="slide1.jpg">
+                <img src="slide1.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="slide2.jpg">
+                <img src="slide2.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+    </section>
 </main>
 
-    
-<footer>
+    <footer>
+        <p class="footerP"> The best group </p>
+    </footer>
 
-</footer>
-
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 </html>
