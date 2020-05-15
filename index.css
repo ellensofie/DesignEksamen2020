@@ -3,19 +3,31 @@ html, body{
     margin:0;
     padding: 0;
 }
+:root {
+    --main-bg-color: #FFFFFF;
+    --border-top-color: #EF8354;
+    --footer-bg-color: #2D3142;
+    --header-bg-color: #2D3142;
+    --button-bg-color: #2D3142;
+    --button-hover-color: #EF8354;
+    --text-color: #2D3142;
+    --white-text-color: #FFFFFF;
+    --sideNav-bg-color: #607d8b;
+
+}
 body{
     font-family: 'Mouse Memoirs', sans-serif;
     font-family: 'Indie Flower', cursive;
-    background-color: #A6EBC9;
+    background-color: var(--main-bg-color);
     display: flex;
     flex-direction: column;
 }
 
 header{
-    border-top: 5px solid #B79FAD;
+    border-top: 5px solid var(--border-top-color) ;
     padding: 10px 10px;
     width: 100%;
-    background-color: #85C0A1;
+    background-color: var(--header-bg-color);
 }
 
 section{
@@ -24,27 +36,27 @@ section{
     align-items: center;
 }
 footer {
-    border-top: 5px solid #B79FAD;
+    border-top: 5px solid var(--border-top-color);
     margin-top: auto;
-    background-color: #333;
+    background-color: var(--footer-bg-color);
     padding: 5px;
     width: 100%;
 }
 
 h1{
-    color: #213E28;
+    color: var(--text-color);
     font-size: 50px;
     text-align: center;
     padding: 10px;
     text-decoration: none;
     border-radius: 4px;
-    text-shadow: 2px 2px 2px white;
+    text-shadow: 1px 1px 1px #EF8354;
     margin-bottom: 10px;
     cursor: default;
 }
 
 p{
-    color: #213E28;
+    color: var(--text-color);
     font-size: 14px;
     font-style: italic;
     text-align: center;
@@ -59,10 +71,9 @@ button{
 	outline: none;
 	padding: 10px 20px;
 	border-radius: 50px;
-	color: white;
-	background: #426950;
+	color: #FFFFFF;
+	background: var(--button-bg-color);
 	margin-bottom: 50px;
-    box-shadow: 0 3px 20px 0 #426950;
     text-align: center;
     font-size: 16px;
     display: inline-block;
@@ -70,8 +81,9 @@ button{
 
 button:hover{
     cursor: pointer;
-    background: #74AA8D;
-    color: #fff;
+    background: var(--button-hover-color);
+    color: #FFFFFF;
+    box-shadow: 0 3px 20px 0 #2D3142;
 }
 
 input{
@@ -80,7 +92,7 @@ input{
     outline: none;
     padding: 10px 20px;
     border-radius: 10px;
-    box-shadow: 0 3px 20px 0 #426950;
+    box-shadow: 0 3px 20px 0 #2D3142;
 
     /* Følgende sikrer centrering*/
     display: block;
@@ -89,8 +101,7 @@ input{
 }
 ::placeholder{
     text-align: center;
-    color: #333;
-
+    color: #2D3142;
 }
 
 #bookPhoto{
@@ -107,6 +118,11 @@ input{
     margin-top: 10px;
     margin-left: 40%;
 }
+
+.sidenavColors{
+    background: var(--sideNav-bg-color);
+}
+
 .collapsible-header {
     display: -webkit-box;
     display: -webkit-flex;
@@ -115,12 +131,15 @@ input{
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     padding: 1rem;
-    background-color: #64ffda;
-    border-bottom: 1px solid #213E28;
+    background-color: #607d8b;
+    border-bottom: 2px solid #EF8354;
+    color: var(--white-text-color);
 }
 .collapsible-body{
     padding: 40px;
-    background-image: linear-gradient( 135deg, #B79FAD 20%, #64ffda 100%);
-    border-bottom: 1px solid #213E28;
+    border-bottom: 2px solid #EF8354;
+}
 
+.helpIcons{
+    color: #2D3142;
 }
