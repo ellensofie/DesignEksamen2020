@@ -1,18 +1,17 @@
 /* variabler fra create album page */
-const previewImage = document.getElementById("previewImage");
-const file = document.querySelector('input[type=file]').files[0];
-
 window.addEventListener('load', ()=> {
     console.log('the page has fully loaded');
-    setPageObject();
-    getPage();
 });
 
+const previewImage = document.getElementById("previewImage");
+let file;
+let page;
+
 class Page{
-    constructor(title, imgURL, imgtext) {
+    constructor(title, imgURL, photoText) {
         this.title = title;
         this.imgURL = imgURL;
-        this.imgtext = imgtext;
+        this.photoText = photoText;
     }
 
     get getTitle() {
@@ -23,23 +22,31 @@ class Page{
         return this.imgURL;
     }
 
-    get getImgtext() {
-        return this.imgtext;
+    get getPhotoText() {
+        return this.photoText;
     }
 }
 
 function setPageObject(){
-    const page = new Page("My Birthday", file, "Have fun");
+    if (file == null){
+        page = new Page("My Birthday",null,"Have fun");
+    }
+
+    else{
+        page = new Page("My Birthday", file, "Have fun");
+    }
     localStorage.setItem('page',JSON.stringify(page));
 }
 
 function getPage() {
-    document.getElementById("page_title").innerHTML = JSON.parse(localStorage.getItem(page.getTitle));
-    document.getElementById("").innerHTML = JSON.parse(localStorage.getItem(page.getImgURL));
-    document.getElementById("").innerHTML = JSON.parse(localStorage.getItem(page.getImgtext));
+    page = JSON.parse(localStorage.getItem('page'));
+    document.getElementById("pageTitle").innerHTML = page.title;
+    document.getElementById("pagePhoto").innerHTML = page.imgURL;
+    document.getElementById("pagePhotoText").innerHTML =page.photoText;
 }
 
 function filePreview(){
+    file = document.querySelector('input[type=file]').files[0];
     previewImage.src = window.URL.createObjectURL(file);
 }
 
