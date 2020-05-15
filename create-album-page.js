@@ -8,11 +8,23 @@ class Page{
         this.imgURL = imgURL;
         this.imgtext = imgtext;
     }
+
+    get title() {
+        return this.title;
+    }
+
+    get imgURL() {
+        return this.imgURL;
+    }
+
+    get imgtext() {
+        return this.imgtext;
+    }
 }
 
 const pages = [];
 
-function setPageObject(){
+function makePageObject(){
     page = new Page(setTitle()), setPhotoText();
     pages.push(page);
 }
