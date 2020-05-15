@@ -13,17 +13,20 @@ class Page{
 const pages = [];
 
 function setPageObject(){
-    page = new Page(document.getElementById("title_input"), document.getElementById(), document.getElementById("imgtext_input"));
+    page = new Page(setTitle()), setPhotoText();
     pages.push(page);
 }
 
-function loadPhoto() {
-    var x = document.createElement("IMG");
-    x.setAttribute("src", "img_pulpit.jpg");
-    x.setAttribute("width", "304");
-    x.setAttribute("height", "228");
-    document.body.appendChild(x);
+function setTitle() {
+    var title = document.getElementById("title_input");
+    return title;
 }
+
+function setPhotoText() {
+    var photoText = document.getElementById("imgTextInput");
+    return photoText;
+}
+
 
 function setImage() {
 
@@ -58,4 +61,19 @@ function filePreview(input) {
             reject();
         }
     });
+}
+
+
+
+
+///////////////////////////////////////////////////////EKSTRA FRA NETTET
+
+
+
+function loadPhoto() {
+    var x = document.createElement("IMG");
+    x.setAttribute("src", "img_pulpit.jpg");
+    x.setAttribute("width", "304");
+    x.setAttribute("height", "228");
+    document.body.appendChild(x);
 }
