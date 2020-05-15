@@ -13,18 +13,6 @@ class Page{
         this.imgURL = imgURL;
         this.photoText = photoText;
     }
-
-    get getTitle() {
-        return this.title;
-    }
-
-    get getImgURL() {
-        return this.imgURL;
-    }
-
-    get getPhotoText() {
-        return this.photoText;
-    }
 }
 
 function getTitle() {
