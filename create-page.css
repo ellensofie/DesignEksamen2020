@@ -1,0 +1,15 @@
+.photo_input{
+    opacity: 0;
+    z-index: -1;
+}
+
+.create_page{
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+    height: 100%;
+}
+
+.photo{
+    height: 400px;
+}

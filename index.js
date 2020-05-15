@@ -23,4 +23,7 @@ function updateimage(){
     var img = document.getElementById('meme-image');
     var file = document.querySelector('input[type=file]').files[0];
     img.src = window.URL.createObjectURL(file);
+    localStorage.setItem('image',JSON.stringify(img.src));
 }
+
+
