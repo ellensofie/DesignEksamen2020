@@ -14,6 +14,12 @@
         </header>
         <button class="album-buttons" onclick="">New Picture</button>
         <main class="photos">
+            <img src="slide1.jpg" class="photo" id="previewImage">
+            <input class="photo-input" id="photoInput" type="file" accept="image/*" onchange="filePreview()">
+            <label for="photoInput">Upload picture</label>
+
+
+
             <input id="titleInput" type="text">
             <input id="imgTextInput" type="text">
             <button onclick="setPageObject()">save page</button>

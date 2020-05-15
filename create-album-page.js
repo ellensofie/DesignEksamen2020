@@ -6,6 +6,7 @@ window.addEventListener('load', ()=> {
 const previewImage = document.getElementById("previewImage");
 let file;
 let page;
+let img;
 
 class Page{
     constructor(title, imgURL, photoText) {
@@ -25,19 +26,15 @@ function getPhotoText() {
     return photoText;
 }
 
-function getImg() {
-
-}
-
 function setPageObject(){
     if (file == null){
         page = new Page(getTitle(),null,getPhotoText());
     }else if(title == null){
-        page = new Page(null, file, getPhotoText());
+        page = new Page(null, img, getPhotoText());
     }else if (photoText == null){
-        page = new Page(getTitle(), file, null);
+        page = new Page(getTitle(), img, null);
     }else{
-        page = new Page(getTitle(), getImg(), getPhotoText());
+        page = new Page(getTitle(), img, getPhotoText());
     }
     localStorage.setItem('page',JSON.stringify(page));
 }
@@ -46,12 +43,17 @@ function getPage() {
     page = JSON.parse(localStorage.getItem('page'));
     document.getElementById("pageTitle").innerHTML = page.title;
     document.getElementById("pagePhoto").innerHTML = page.imgURL;
+    console.log(page.imgURL);
     document.getElementById("pagePhotoText").innerHTML = page.photoText;
 }
+
+
 
 function filePreview(){
     file = document.querySelector('input[type=file]').files[0];
     previewImage.src = window.URL.createObjectURL(file);
+    img = previewImage.src;
+
 }
 
 function loadPhoto() {
