@@ -1,8 +1,11 @@
 /* variabler fra create album page */
 const previewImage = document.getElementById("previewImage");
+const file = document.querySelector('input[type=file]').files[0];
 
 window.addEventListener('load', ()=> {
     console.log('the page has fully loaded');
+    setPageObject();
+    getPage();
 });
 
 class Page{
@@ -12,67 +15,33 @@ class Page{
         this.imgtext = imgtext;
     }
 
-    get title() {
+    get getTitle() {
         return this.title;
     }
 
-    get imgURL() {
+    get getImgURL() {
         return this.imgURL;
     }
 
-    get imgtext() {
+    get getImgtext() {
         return this.imgtext;
     }
 }
 
-const pages = [];
-
-function makePageObject(){
-    page = new Page(setTitle()), setPhotoText();
-    pages.push(page);
+function setPageObject(){
+    const page = new Page("My Birthday", file, "Have fun");
+    localStorage.setItem('page',JSON.stringify(page));
 }
 
-function setTitle() {
-    var title = document.getElementById("title_input");
-    return title;
+function getPage() {
+    document.getElementById("page_title").innerHTML = JSON.parse(localStorage.getItem(page.getTitle));
+    document.getElementById("").innerHTML = JSON.parse(localStorage.getItem(page.getImgURL));
+    document.getElementById("").innerHTML = JSON.parse(localStorage.getItem(page.getImgtext));
 }
-
-function setPhotoText() {
-    var photoText = document.getElementById("imgTextInput");
-    return photoText;
-}
-
-
-function setImage() {
-
-}
-
-function setPage(){
-    var page = new Page(document.getElementById("text_input"),"C:\\Users\\ellen\\WebstormProjects\\DesignEksamen2020\\logo.png" , document.getElementById("imgtext_input"));
-    var file = document.querySelector('input[type=file]').files[0];
-    img.src = window.URL.createObjectURL(file);
-    localStorage.setItem('image',JSON.stringify(img.src));
-    localStorage.setItem(page);
-}
-
-
-function getImages(){
-    let img = document.getElementById('page-image');
-    img.src = JSON.parse(localStorage.getItem('image'));
-}
-
 
 function filePreview(){
-    const file = document.querySelector('input[type=file]').files[0];
     previewImage.src = window.URL.createObjectURL(file);
 }
-
-
-
-
-///////////////////////////////////////////////////////EKSTRA FRA NETTET
-
-
 
 function loadPhoto() {
     var x = document.createElement("IMG");
